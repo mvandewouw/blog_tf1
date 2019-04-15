@@ -1,4 +1,4 @@
-## My current code editor: Visual Code!
+## My current code editor: Visual Code! or vscodium?
 
 In the last few months i tried several different text editors, and at the moment i find myself starting up Visual Code most of the time. And...i think it's an awesome editor! With some tasks i still have to force myself to stay in the editor, like when using git or some other tasks.
 There are a tons of plugins available to make my life as an Dev/Ops engineer so much better.
@@ -12,7 +12,14 @@ So grab your preferred binary here: [https://code.visualstudio.com/](https://cod
 
 Sourcecode is available here: [https://github.com/microsoft/vscode](https://github.com/microsoft/vscode)
 
+Since 4 april 2019 it is also released in the snapstore officially: Check it out here [https://snapcraft.io/code](https://snapcraft.io/code) 
+
 Read and understand about data collection here and how to opt-out for most of it: [https://code.visualstudio.com/License/](https://code.visualstudio.com/License/)
+
+And this point brings me to the title of this post. All this tracking/datacollecting stuff, why isn't there a version without any of this tracking/datacollecting stuff in it? Vscodium is here to the rescue. This is a compilation of vscode with everything related to data collection removed from the source: [https://www.fossmint.com/vscodium-clone-of-visual-studio-code-for-linux/](https://www.fossmint.com/vscodium-clone-of-visual-studio-code-for-linux/)
+They also have builds for windows btw: [https://github.com/VSCodium/vscodium/releases](https://github.com/VSCodium/vscodium/releases). 
+The only thing that is different is the icon, but everything else works just fine (also all the plugins etc).
+Here is how to migrate your settings from vscode to vscodium: [https://vscodium.com/#migrate](https://vscodium.com/#migrate)
 
 Well, installing it should be a next next finish kind of thing. On setup page for linux you can also make use of a deb repository: [https://code.visualstudio.com/docs/setup/setup-overview](https://code.visualstudio.com/docs/setup/setup-overview)
 
@@ -93,7 +100,7 @@ Options
 
 The 3 options i use the most are the -n -r or -g flag.
 
-### Here are my top used plugins (in random order):
+### Here are some of the plugins which are quite handy (in a random order):
 
 #### 1. [Docker explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)
 This is a great plugin for managing different aspects of your docker platform. 
@@ -160,3 +167,6 @@ Nice plugin for creating your Markdown documents
 
 Just a bit of eyecandy, but also makes it more coherent.
 ![Vscode icons](https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/images/screenshot.gif)
+
+Let me know if i miss some super essential plugin, or a handy feature in vscode, thanks alot !
+
