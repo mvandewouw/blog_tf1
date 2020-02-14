@@ -1,1 +1,1 @@
-Blogpost Techforce1 about visual code
+Blogpost Techforce1
