@@ -16,11 +16,11 @@ So for example:
 
 2FA is a basicly a subset of the above. And like the name, it is 2 factor. So this is a form of MFA, but not every MFA is a 2FA.
 
-The absolute worst you can have is a SFA (Single factor authentication). Your account could be vulnerable to a number of attacks. Brute forcing / dictionary checking is one of them. A lot of people still use an easy, dictionary based password that also is used for different services as well. I will not go into detail on this problem but it happens. A lot. 
+The absolute worst you can have is a SFA (Single factor authentication). Your account could is vulnerable to a number of attacks. Brute forcing / dictionary checking is one of them. A lot of people still use an easy, dictionary based password that is used for different services as well. I will not go into detail on this problem but it happens. A lot. 
 
 ![](images/how_hacking_works.png)
 
-There are all kinds of 2FA available. The most known 2FA are:
+There are all kinds of 2FA available. The best known 2FA are:
 1) SMS token
 2) Authenticator app (approval based sign in or OTP (one time password))
 3) Security token
@@ -55,11 +55,11 @@ Over the past couple of months I started using Yubikeys for hardening my online 
 
 [Here](https://www.dongleauth.info/) is a website which lists all sites using OTP/U2F
 
-I am using it to store my GPG keys and sign my commits and use the hardened ssh-agent. (What's really cool is that [openssh 8.2](https://www.openssh.com/txt/release-8.2) is released and supports the Yubikey tokens out of the box).
+I use it to store my GPG keys and sign my commits and use the hardened ssh-agent. (What's really cool is that [openssh 8.2](https://www.openssh.com/txt/release-8.2) is released and supports the Yubikey tokens out of the box).
 
 Questions may arise. For example: why not an authenticator app, or sms based 2FA? Simply because it is less secure.
 It might be good for services online that are of lesser importance, but when it is about mail take no consessions. Be secure as you can get.
-Simply because the mail is the root of your identity online. When this account is compromised password resets can be done for a lot of services you registered for.
+Simply because mail is the root of your identity online. When this account is compromised password resets can be done for a lot of services you registered for.
 
 ## Checking the Yubikeys
 
@@ -67,7 +67,7 @@ The first thing i did was verify the genuity of my yubikeys
 
 https://www.yubico.com/genuine/
 
-If you want to check this manually you can check on how to do that [here](https://maxammann.org/posts/2019/09/verifying-yubikeys-for-genuity/)
+If you want to check this manually you can check on how to [here](https://maxammann.org/posts/2019/09/verifying-yubikeys-for-genuity/)
 
 ## Installation of yubikey-manager software
 Installation is covered [here](https://support.yubico.com/support/solutions/articles/15000010964-enabling-the-yubico-ppa-on-ubuntu). But basicly:
@@ -77,7 +77,7 @@ sudo apt update
 sudo apt install yubikey-manager-qt
 ```
 
-With Yubikey manager you can configure different 
+With the Yubikey manager you can configure different features of your device. For example: i switch off the OTP token here, so it doesnt spew an OTP every time i accidentaly touch the yubikey.
 
 
 ## Setup PGP keys
@@ -107,7 +107,7 @@ Installing keepassxc on ubuntu it should be straight forward. You can use the st
 ```zsh
 sudo snap connect keepassxc:raw-usb core:raw-usb
 ```
-Configure you're
+Configure your
 Yubikey manager: Applications>OTP>Long touch (slot2)
 keepassxc: Database>Change Master key>Add additional protection>
 
@@ -145,6 +145,7 @@ ykman --device 1234567 info
 ## Use of NFC Yubi 5 key
 With this yubikey it is possible to install an [yubi authenticator](https://www.yubico.com/products/services-software/download/yubico-authenticator/) app on your NFC enabled phone. You scan an QR code and use multiple services in one application. Very nice.
 After you added some services you can generate an 2fa code by refreshing it, and tapping the Yubikey NFC device to your phone:
+
 ![YubiKey 5 NFC](images/2.jpg "YubiKey 5 NFC")
 
 And all the 2FA codes are generated:
@@ -154,6 +155,6 @@ And all the 2FA codes are generated:
 ## Ditch SFA, stay safe physically and digitally.
 There are many more features when using the yubikey, for example, the [Yubikey PAM module](https://developers.yubico.com/yubico-pam/). So there is still a lot to figure out :)
 
-This is it for now.
+That's it for now.
 
 Michel van de Wouw
